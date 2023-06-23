@@ -1,0 +1,11 @@
+node {
+stage ('check maven'){
+sh 'mvn install'
+}
+stage('clone java project'){
+git branch: 'main', url: 'https://github.com/Govardhan170994/Template.git'
+}
+stage ('build th code'){
+sh 'mvn install'
+}
+}
